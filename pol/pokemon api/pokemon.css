@@ -1,0 +1,273 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ca5133;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.3) 26%, transparent 27%, transparent 74%, rgba(0,0,0,0.3) 75%, rgba(0,0,0,0.3) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.3) 26%, transparent 27%, transparent 74%, rgba(0,0,0,0.3) 75%, rgba(0,0,0,0.3) 76%, transparent 77%, transparent);
+    background-size: 23px 23px;
+    animation: moveBackground 15s linear infinite;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 0px -64px, 0px -64px;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+
+}
+
+.contenidor-pokemon {
+  background-color: #b0a9a9;
+  border: 3px solid black;
+  background-image:
+  linear-gradient(0deg, transparent 24%, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.7) 26%, transparent 27%, transparent 74%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.7) 76%, transparent 77%, transparent),
+  linear-gradient(90deg, transparent 24%, rgba(0,0,0,0.7) 25%, rgba(0,0,0,0.7) 26%, transparent 27%, transparent 74%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,0.7) 76%, transparent 77%, transparent);
+  background-size: 16px 16px;
+  background-origin: content-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  padding: 20px;
+  width: 800px;
+  height: 800px;
+  place-items: center;
+  animation: moveBackgroundleft 5s linear infinite;
+}
+
+.informacio {
+  display: grid;
+  grid-template-rows: 15% 8% 15% 28% auto;
+  grid-template-columns: 100%;
+  text-align: center;
+  border: 4px solid orange;
+  width: 500px;
+  height: 800px;
+  background-color: #6b6060;
+  background-image:
+  linear-gradient(0deg, transparent 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 26%, transparent 27%, transparent 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 76%, transparent 77%, transparent),
+  linear-gradient(90deg, transparent 24%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 26%, transparent 27%, transparent 74%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 76%, transparent 77%, transparent);
+  background-size: 16px 16px;
+  background-position: center;
+  background-origin: content-box;
+  animation: moveBackgroundright 7s linear infinite;
+}
+
+@keyframes moveBackgroundleft {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: -64px -64px, -64px -64px;
+  }
+}
+
+@keyframes moveBackgroundright {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 64px -64px, 64px -64px;
+  }
+}
+
+.pokemon-nom {
+  margin-top: -40px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-family: 'Pokemon Solid', sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 3em;
+  color: white;
+  text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.pokemon-tipus{
+  margin-top: -40px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.pokemon-moviments{
+  margin-top: -25px;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 10;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#search, .form-select {
+  font-size: 15px;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 300px;
+  margin-bottom: 0px;
+}
+
+.pokemon-img{
+  width:100%;
+}
+
+.titol-img{
+  width:18%;
+}
+
+#titol{
+  text-align: center;
+  background-color: rgb(62, 62, 66);
+  border-bottom: 4px solid orange;
+}
+
+.pokemon-imatges {
+  display: flex;
+  justify-content: center;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: -20px;
+  position: relative;
+  transform: translateY(-50px);
+}
+
+.caracteristiques{
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin-top: -50px;
+  place-items: center;
+  text-align: center;
+}
+
+.caracteristiques p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.caracteristiques p:nth-child(1){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.caracteristiques p:nth-child(2){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.caracteristiques p:nth-child(3){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.caracteristiques p:nth-child(4){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.caracteristiques p:nth-child(5){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.caracteristiques p:nth-child(6){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.caracteristiques p:nth-child(7){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.caracteristiques p:nth-child(8){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.caracteristiques p:nth-child(9){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+.caracteristiques p:nth-child(10){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 6;
+  grid-row-end: 5;
+}
+
+#tipus{
+  font-family: 'Irish Grover', cursive;
+  font-size: 2em;
+  color: rgb(235, 94, 94);
+  text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.caracteristiques span{
+  display: block;
+  color: orange
+}
+
+.pokemon-mov-text{
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.3em;
+  color: white;
+}
+
+.pokemon-mov-text strong{
+  color: rgb(235, 94, 94);
+  font-size: 1.0em;
+  text-shadow: 3px 0 0 #000, -3px 0 0 #000, 0 3px 0 #000, 0 -3px 0 #000, 2px 2px #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}

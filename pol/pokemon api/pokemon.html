@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Pokemon API</title>
+  <link rel="stylesheet" type="text/css" href="pokemon.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="pokemon.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6MtrliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+</head>
+<body>
+  
+  <div id="titol">
+    <img class="titol-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" alt="Pokémon Logo" />
+  </div>
+
+  <div class="buscador">
+    <input
+      id="search"
+      type="text"
+      class="form-control search-input"
+      aria-label="Username"
+      style="margin-left: 195px;"/>
+    
+    <select class="form-select">
+      <option value="Nombre">Nombre</option>
+      <option value="Número pokédex">Número pokédex</option>
+    </select>
+  </div>
+
+  <main>
+    <div class="contenidor-pokemon"></div>
+
+    <div class="informacio">
+      <div class="pokemon-nom"></div>
+      <div class="pokemon-tipus"><span id="tipus"></span></div>
+
+      <div class="pokemon-moviments">
+        <p class="pokemon-mov-text">
+          <strong>Moves: </strong>
+          <span id="moviments"></span>
+        </p>
+      </div>
+
+      <div class="pokemon-imatges">
+        <img id="pokemon-front" src="" alt="Sprite frontal" />
+        <img id="pokemon-back" src="" alt="Sprite trasero" />
+      </div>
+
+      <div class="caracteristiques">
+        <p>Number Pokedex <span id="id"></span></p>
+        <p>Total Stats <span id="totalstats"></span></p>
+        <p>Height <span id="height"></span></p>
+        <p>Weight <span id="weight"></span></p>
+        <p>HP <span id="hp"></span></p>
+        <p>Attack <span id="attack"></span></p>
+        <p>Defense <span id="defense"></span></p>
+        <p>Special Attack <span id="specialattack"></span></p>
+        <p>Special Defense <span id="specialdefense"></span></p>
+        <p>Speed <span id="speed"></span></p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
