@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 50px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  .game-list {
+    margin-top: 30px;
+  }
+
+  .game-link {
+    display: block;
+    margin: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #0066cc;
+    padding: 10px 20px;
+    border: 2px solid #0066cc;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .game-link:hover {
+    background-color: #0066cc;
+    color: white;
+  }
